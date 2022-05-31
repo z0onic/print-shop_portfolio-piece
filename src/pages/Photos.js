@@ -10,7 +10,7 @@ export default function Photos() {
             <Image key={photo.id} img={photo} className={getClass(i)} />
         )
     })
-    // console.log(photos.allPhotos[0])
+    // console.log(allPhotos)
     return (
         <main className="photos">
             {photosHtml}

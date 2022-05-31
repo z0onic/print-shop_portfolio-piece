@@ -8,7 +8,6 @@ function ContextProvider({children}) {
 
     const toggleFavorite = id => {
         setAllPhotos(prev => {
-            // console.log(`clicked ${id}`)
             return prev.map(item => {
                 return item.id === id ? 
                     {...item, isFavorite: !item.isFavorite} : 
@@ -24,8 +23,6 @@ function ContextProvider({children}) {
     const removeFromCart = img => {
         setCartItems(prev => prev.filter(photo => photo.id !== img.id))
     }
-
-    // console.log(cartItems)
 
     useEffect(() => {
         const getPhotos = async () => {
