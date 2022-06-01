@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/print-shop_portfolio-piece/static/css/main.ca4aca0b.css",
-    "main.js": "/print-shop_portfolio-piece/static/js/main.47123446.js",
+    "main.js": "/print-shop_portfolio-piece/static/js/main.c8b299b7.js",
     "static/js/787.1ffcaaa2.chunk.js": "/print-shop_portfolio-piece/static/js/787.1ffcaaa2.chunk.js",
     "index.html": "/print-shop_portfolio-piece/index.html",
     "main.ca4aca0b.css.map": "/print-shop_portfolio-piece/static/css/main.ca4aca0b.css.map",
-    "main.47123446.js.map": "/print-shop_portfolio-piece/static/js/main.47123446.js.map",
+    "main.c8b299b7.js.map": "/print-shop_portfolio-piece/static/js/main.c8b299b7.js.map",
     "787.1ffcaaa2.chunk.js.map": "/print-shop_portfolio-piece/static/js/787.1ffcaaa2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca4aca0b.css",
-    "static/js/main.47123446.js"
+    "static/js/main.c8b299b7.js"
   ]
 }
