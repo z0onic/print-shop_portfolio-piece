@@ -3,7 +3,10 @@ import PropTypes from 'prop-types'
 import {Context} from '../Context'
 import useHover from '../hooks/useHover'
 
+//add a div on bottom of image with author attribution that pops up when mouse hover over image, clicked it will lead to artists page
+
 function Image({className, img}) {
+    // console.log(img)
     const [iconRef, hovered] = useHover()
     const {
         toggleFavorite, 
@@ -38,7 +41,7 @@ function Image({className, img}) {
             className={`${className} image-container`} 
             ref={iconRef}
         >
-            <img src={img.url} className="image-grid" alt="" />
+            <img src={img.regular} className="image-grid" alt={img.alt_description} />
             {heartIcon}
             {cartIcon}
         </div>
