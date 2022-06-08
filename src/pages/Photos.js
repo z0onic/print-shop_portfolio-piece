@@ -4,20 +4,31 @@ import {getClass} from '../utils'
 import {Context} from '../Context'
 
 export default function Photos() {
-    const {allPhotos, searchWord, setSearchWord} = useContext(Context)
+    const {allPhotos, searchWord, setSearchWord, setSearch} = useContext(Context)
     const photosHtml = allPhotos.map((photo, i) => {
         return (
             <Image key={photo.id} img={photo} className={getClass(i)} />
         )
     })
-    // console.log(allPhotos)
+
+    const handleSearch = e => {
+        e.preventDefault()
+        setSearch(true)
+    }
+
     return (
-        <main className="photos">
-            <form class="search">
-                <input type="text" value={searchWord} />
-                <button type="submit">Search</button>
+        <main className="photo-page">
+            <form className="search">
+                <input type="text" value={searchWord} onChange={e => setSearchWord(e.target.value)} />
+                <button type="submit" onClick={handleSearch}>Search</button>
             </form>
-            {photosHtml}
+            <div className="photos">
+                {
+                    allPhotos.length === 0 ?
+                    <h3> No results found </h3> :
+                    photosHtml
+                }
+            </div>
         </main>
     )
 }

@@ -3,26 +3,29 @@ import PropTypes from 'prop-types'
 import {Context} from '../Context'
 import useHover from '../hooks/useHover'
 
-//add a div on bottom of image with author attribution that pops up when mouse hover over image, clicked it will lead to artists page
-
 function Image({className, img}) {
-    // console.log(img)
     const [iconRef, hovered] = useHover()
     const {
-        toggleFavorite, 
         cartItems, 
         addToCart, 
-        removeFromCart
+        removeFromCart,
+        favorites,
+        addFavorite,
+        removeFavorite,
+        zoom,
+        setZoom,
+        handleZoom
     } = useContext(Context)
 
-    const heartIcon = img.isFavorite ? 
-        <i 
-            onClick={() => toggleFavorite(img.id)} 
+    const heartIcon = favorites.some(item => item.id === img.id) ?
+        <i
             className="ri-heart-fill favorite"
+            onClick={() => removeFavorite(img)}
         ></i> :
-        hovered && <i
-            onClick={() => toggleFavorite(img.id)}
+        (hovered || zoom) &&
+        <i
             className="ri-heart-line favorite"
+            onClick={() => addFavorite(img)}
         ></i>
 
     const cartIcon = cartItems.some(item => item.id === img.id) ? 
@@ -30,20 +33,38 @@ function Image({className, img}) {
             className="ri-shopping-cart-fill cart"
             onClick={() => removeFromCart(img)}
         ></i> :
-        hovered && 
+        (hovered || zoom) && 
             <i 
                 className="ri-add-circle-line cart"
                 onClick={() => addToCart(img)}
             ></i>
+
+    const closeIcon = (
+        <i 
+            class="ri-close-circle-fill close"
+            onClick={() => setZoom(false)}
+        ></i>
+    )
 
     return (
         <div 
             className={`${className} image-container`} 
             ref={iconRef}
         >
-            <img src={img.regular} className="image-grid" alt={img.alt_description} />
+            <img 
+                src={img.regular} 
+                className="image-grid" 
+                alt={img.alt_description}
+                onClick={e => handleZoom(img)}
+            />
             {heartIcon}
             {cartIcon}
+            {zoom && closeIcon}
+            {(hovered || zoom) && 
+                <div className="artist">
+                    <p>{img.name}</p>
+                </div>
+            }
         </div>
     )
 }

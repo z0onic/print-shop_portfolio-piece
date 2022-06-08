@@ -8,8 +8,6 @@ function CartItem({item}) {
     const {removeFromCart} = useContext(Context)
 
     const iconClass = hovered ? 'ri-delete-bin-fill' : 'ri-delete-bin-line'
-    
-    // console.log(iconRef, hovered)
 
     return (
         <div className="cart-item">
