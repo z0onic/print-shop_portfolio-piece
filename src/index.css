@@ -149,10 +149,6 @@ img.image-grid {
   left: 5px;
 }
 
-.ri-heart-fill {
-  /* opacity: .7; */
-}
-
 .ri-delete-bin-line, .ri-delete-bin-fill {
   font-size: 1.3em;
   cursor: pointer;
@@ -226,12 +222,12 @@ a:hover { color: var(--light-blue); }
 a:active { color: var(--light-blue); }
 
 .zoomed {
-  width: 55vw;
+  width: 50vw;
   background: rgba(200, 200, 200);
   z-index: 3;
   display: flex;
   position: fixed;
-  left: 23vw;
+  left: 25vw;
   top: 80px;
 }
 
@@ -242,6 +238,16 @@ a:active { color: var(--light-blue); }
 
 .zoomed img {
   width: 100%;
+}
+
+.overlay {
+  background: rgba(200, 200, 200, .5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /* .zoomed p {

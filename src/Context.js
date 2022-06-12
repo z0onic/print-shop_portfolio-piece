@@ -3,10 +3,6 @@ import { createApi } from 'unsplash-js'
 
 const Context = React.createContext()
 
-//replace url in getPhotos with an unsplash api call
-//call a limited amount of photos
-//end up with an array of objects. each object has url id and isFav property
-
 function ContextProvider({children}) {
     const [allPhotos, setAllPhotos] = useState([])
     const [cartItems, setCartItems] = useState([])
@@ -42,7 +38,7 @@ function ContextProvider({children}) {
             setZoom(true)
         }
     }
-    console.log(zoomImg)
+
     useEffect(() => {
         if(search === true) {
             api.search
@@ -63,6 +59,7 @@ function ContextProvider({children}) {
         // }
         // getPhotos()
     }, [search])
+
 
     return (
         <Context.Provider 
