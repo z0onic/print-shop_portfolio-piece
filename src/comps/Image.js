@@ -13,7 +13,6 @@ function Image({className, img}) {
         addFavorite,
         removeFavorite,
         zoom,
-        setZoom,
         handleZoom
     } = useContext(Context)
 
@@ -39,28 +38,20 @@ function Image({className, img}) {
                 onClick={() => addToCart(img)}
             ></i>
 
-    const closeIcon = (
-        <i 
-            class="ri-close-circle-fill close"
-            onClick={() => setZoom(false)}
-        ></i>
-    )
-
     return (
-        <div 
+        <div
             className={`${className} image-container`} 
             ref={iconRef}
         >
-            <img 
-                src={img.regular} 
-                className="image-grid" 
+            <img
+                src={img.regular}
+                className="image-grid"
                 alt={img.alt_description}
                 onClick={e => handleZoom(img)}
             />
             {heartIcon}
             {cartIcon}
-            {zoom && closeIcon}
-            {(hovered || zoom) && 
+            {(hovered || zoom) &&
                 <div className="artist">
                     <p>{img.name}</p>
                 </div>
@@ -74,7 +65,7 @@ Image.propsTypes = {
     img: PropTypes.shape({
         url: PropTypes.string,
         id: PropTypes.string,
-        isFavorite: PropTypes.bool
+        // isFavorite: PropTypes.bool
     })
 }
 
