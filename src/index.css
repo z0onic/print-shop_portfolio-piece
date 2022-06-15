@@ -174,7 +174,7 @@ img.image-grid {
 
 .artist {
   position: relative;
-  bottom: 46px;
+  bottom: 44px;
   color: var(--light-blue);
   background: rgba(200, 200, 200, .5);
 }
@@ -215,11 +215,13 @@ header {
 
 a {
   text-decoration: none;
+  color: var(--light-blue);
 }
 
 a:visited { color: var(--light-blue); }
 a:hover { color: var(--light-blue); }
 a:active { color: var(--light-blue); }
+
 
 .zoomed {
   width: 50vw;
@@ -241,7 +243,7 @@ a:active { color: var(--light-blue); }
 }
 
 .overlay {
-  background: rgba(200, 200, 200, .5);
+  background: rgba(200, 200, 200, .7);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -270,4 +272,11 @@ a:active { color: var(--light-blue); }
   .cart-item img {
     width: 150px;
   }
+
+  .zoomed {
+    width: 90vw;
+    left: 5vw;
+    top: 25vh;
+  }
+
 }
