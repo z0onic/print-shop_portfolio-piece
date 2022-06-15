@@ -44,12 +44,13 @@ function ContextProvider({children}) {
             api.search
                 .getPhotos({query: searchWord, orientation: 'landscape', perPage: 30})
                 .then(res => setAllPhotos(res.response.results.map(item => {
+                    // console.log(item)
                     const { id, alt_description, urls, user } = item
                     const { regular } = urls
                     const { name } = user
-                    return {id, alt_description, regular, name, is_favorite: false}
+                    return { id, alt_description, regular, name }
                 })))
-                .catch(() => console.log('something went wrong'))
+                .catch(e => console.log('something went wrong', e))
             setSearch(false)
         }
         // const getPhotos = async () => {
