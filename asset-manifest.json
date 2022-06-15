@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/print-shop_portfolio-piece/static/css/main.676aa706.css",
-    "main.js": "/print-shop_portfolio-piece/static/js/main.a4970b0c.js",
+    "main.css": "/print-shop_portfolio-piece/static/css/main.459599cb.css",
+    "main.js": "/print-shop_portfolio-piece/static/js/main.fbddc39d.js",
     "static/js/787.1ffcaaa2.chunk.js": "/print-shop_portfolio-piece/static/js/787.1ffcaaa2.chunk.js",
     "index.html": "/print-shop_portfolio-piece/index.html",
-    "main.676aa706.css.map": "/print-shop_portfolio-piece/static/css/main.676aa706.css.map",
-    "main.a4970b0c.js.map": "/print-shop_portfolio-piece/static/js/main.a4970b0c.js.map",
+    "main.459599cb.css.map": "/print-shop_portfolio-piece/static/css/main.459599cb.css.map",
+    "main.fbddc39d.js.map": "/print-shop_portfolio-piece/static/js/main.fbddc39d.js.map",
     "787.1ffcaaa2.chunk.js.map": "/print-shop_portfolio-piece/static/js/787.1ffcaaa2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.676aa706.css",
-    "static/js/main.a4970b0c.js"
+    "static/css/main.459599cb.css",
+    "static/js/main.fbddc39d.js"
   ]
 }
